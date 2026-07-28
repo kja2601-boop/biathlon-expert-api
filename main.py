@@ -4,7 +4,13 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI(
     title="Biathlon Expert API",
     description="API for the Biathlon Expert GPT",
-    version="1.0.0"
+    version="1.0.0",
+    servers=[
+        {
+            "url": "https://biathlon-expert-api.onrender.com"
+        }
+    ]
+)
 )
 
 app.add_middleware(
